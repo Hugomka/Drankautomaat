@@ -15,7 +15,7 @@ namespace Drankautomaat
     {
         private readonly string studentnaam = "Hugo Mkandawire";
         private Voorraad voorraad = new Voorraad();
-        private decimal inworp = 0;
+        public decimal inworp = 0;
 
         public Form1()
         {

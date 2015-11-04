@@ -18,7 +18,7 @@ namespace Drankautomaat
 
         public override string ToString()
         {
-            return "Koffie: " + Naam + " (\u20AC" + Prijs + ",00) Voorraad: " + Voorraad;
+            return "Koffie: " + Naam + " (\u20AC" + Prijs + ") Voorraad: " + Voorraad;
         }
     }
 }

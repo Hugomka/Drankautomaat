@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Drankautomaat
 {
-    public class Verkoop : IComparable
+    public class Verkoop : IComparable<Verkoop>
     {
         public DateTime Tijdstip { get; set; }
         public Drank Drank { get; set; }
@@ -16,10 +16,14 @@ namespace Drankautomaat
             Tijdstip = DateTime.Now;
             Drank = drank;
         }
-
-        public int CompareTo(object obj)
+        /// <summary>
+        /// Sorteermethode op tijdstip
+        /// </summary>
+        /// <param name="andere">Andere verkoopregel in de lijst</param>
+        /// <returns></returns>
+        public int CompareTo(Verkoop andere)
         {
-            return Tijdstip.CompareTo(obj);
+            return andere.Tijdstip.CompareTo(Tijdstip);
         }
 
         public override string ToString()

@@ -32,7 +32,10 @@ namespace Drankautomaat
 
         public void VerkochteProduct(Drank drank)
         {
+            // Toevogen bij de verkooplijst
             verkochteProducten.Add(new Verkoop(drank));
+            // Sorteren op tijdstip van hoog naar laag
+            verkochteProducten.Sort();
         }
 
         public List<IVoorraad> BeschikbareProducten()
